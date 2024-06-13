@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Comandas</title>
+        <link rel="stylesheet" href="./css/style.css">
+
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <a href="#" class="nav-link">Inicio</a>
+                <a href="#comanda" class="nav-link">Comanda</a>
+                <a href="#" class="nav-link">Contacto</a>
+            </nav>
+        </header>
+
+        <section id="comanda" class="comanda">
+            <h2>Comanda</h2>
+            <label for="mesas">Mesa:</label>
+            <select id="mesas" name="mesas">
+                <option value disabled selected>Selecciona una mesa</option>
+                <option value="mesa 1">mesa 1</option>
+                <option value="mesa 2">mesa 2</option>
+                <option value="mesa 3">mesa 3</option>
+                <option value="mesa 4">mesa 4</option>
+            </select>
+
+            <form id="orderForm">
+
+                <div class="menu-section">
+                    <h3>Comida</h3>
+                    <label for="entrada">Entradas:</label>
+                    <select id="entrada" name="entrada" >
+                        <option value disabled selected>Selecciona una entrada</option>
+                        <option value="Sopa">Crema del dia</option>
+                        <option value="Ensalada">Seviche de chicharrom</option>
+
+                    </select>
+                    <label for="cantidadEntrada">Cantidad:</label>
+                    <input type="number" id="cantidadEntrada"
+                        name="cantidadEntrada" min="1" value="1" required>
+
+                    <label for="platosFuertes">Plato Fuerte:</label>
+                    <select id="platosFuertes" name="platosFuertes" required>
+                        <option value disabled selected>Selecciona un plato
+                            fuerte</option>
+                        <option value="Pizza">Pizza</option>
+                        <option value="Pasta">Pasta</option>
+                        <option value="Hamburguesa">Hamburguesa</option>
+                    </select>
+                    <label for="cantidadPlatosFuertes">Cantidad:</label>
+                    <input type="number" id="cantidadPlatosFuertes"
+                        name="cantidadPlatosFuertes" min="1" value="1" required>
+                </div>
+
+                <div class="menu-section">
+                    <h3>Bebidas</h3>
+                    <label for="bebidas">Bebida:</label>
+                    <select id="bebidas" name="bebidas" required>
+                        <option value disabled selected>Selecciona una
+                            bebida</option>
+                        <option value="Coca Cola">baso de limonda
+                            jamaica</option>
+                        <option value="Jugo de Naranja">jarra de limonada de
+                            jamaica</option>
+                        <option value="Agua">Agua</option>
+                    </select>
+                    <label for="cantidadBebidas">Cantidad:</label>
+                    <input type="number" id="cantidadBebidas"
+                        name="cantidadBebidas" min="1" value="1">
+                </div>
+
+                <button type="submit">Agregar a la Comanda</button>
+            </form>
+
+            <div id="orderSummary">
+                <h3>Resumen de la Comanda</h3>
+                <ul id="orderList"></ul>
+            </div>
+        </section>
+
+        <script src="/FRONT/js/funcionalidad.js"></script>
+
+    </body>
+</html>
